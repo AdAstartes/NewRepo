@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace ProjectFinante
 {
     public partial class Form1 : Form
-    {
+    { //asd 
         public Form1()
         {
             InitializeComponent();
