@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjectFinante
 {
-    public partial class PanelCheltuieliRecurente : UserControl
+    public partial class PanelStatisticiBalanta : UserControl
     {
-        public PanelCheltuieliRecurente()
+        public PanelStatisticiBalanta()
         {
             InitializeComponent();
-        }
-
-        private void textBox_valoare_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Common.onlyNumbers(sender, e);
         }
     }
 }

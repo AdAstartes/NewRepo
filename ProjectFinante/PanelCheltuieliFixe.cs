@@ -16,5 +16,10 @@ namespace ProjectFinante
         {
             InitializeComponent();
         }
+
+        private void textBox_valoare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Common.onlyNumbers(sender, e);
+        }
     }
 }

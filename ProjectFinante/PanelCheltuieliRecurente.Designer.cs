@@ -40,12 +40,14 @@ namespace ProjectFinante
             // 
             // btn_salveaza
             // 
+            this.btn_salveaza.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_salveaza.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_salveaza.Location = new System.Drawing.Point(14, 248);
             this.btn_salveaza.Name = "btn_salveaza";
-            this.btn_salveaza.Size = new System.Drawing.Size(94, 29);
+            this.btn_salveaza.Size = new System.Drawing.Size(95, 30);
             this.btn_salveaza.TabIndex = 20;
             this.btn_salveaza.Text = "Salveaza";
-            this.btn_salveaza.UseVisualStyleBackColor = true;
+            this.btn_salveaza.UseVisualStyleBackColor = false;
             // 
             // comboBox_recurenta
             // 
@@ -58,15 +60,16 @@ namespace ProjectFinante
             "An"});
             this.comboBox_recurenta.Location = new System.Drawing.Point(14, 194);
             this.comboBox_recurenta.Name = "comboBox_recurenta";
-            this.comboBox_recurenta.Size = new System.Drawing.Size(186, 28);
+            this.comboBox_recurenta.Size = new System.Drawing.Size(185, 28);
             this.comboBox_recurenta.TabIndex = 19;
             // 
             // label_recurenta
             // 
             this.label_recurenta.AutoSize = true;
+            this.label_recurenta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_recurenta.Location = new System.Drawing.Point(14, 167);
             this.label_recurenta.Name = "label_recurenta";
-            this.label_recurenta.Size = new System.Drawing.Size(75, 20);
+            this.label_recurenta.Size = new System.Drawing.Size(80, 20);
             this.label_recurenta.TabIndex = 18;
             this.label_recurenta.Text = "Recurenta";
             // 
@@ -74,24 +77,27 @@ namespace ProjectFinante
             // 
             this.textBox_valoare.Location = new System.Drawing.Point(14, 114);
             this.textBox_valoare.Name = "textBox_valoare";
-            this.textBox_valoare.Size = new System.Drawing.Size(186, 27);
+            this.textBox_valoare.Size = new System.Drawing.Size(185, 27);
             this.textBox_valoare.TabIndex = 17;
+            this.textBox_valoare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_valoare_KeyPress);
             // 
             // label_valoare
             // 
             this.label_valoare.AutoSize = true;
+            this.label_valoare.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_valoare.Location = new System.Drawing.Point(14, 88);
             this.label_valoare.Name = "label_valoare";
-            this.label_valoare.Size = new System.Drawing.Size(59, 20);
+            this.label_valoare.Size = new System.Drawing.Size(61, 20);
             this.label_valoare.TabIndex = 16;
             this.label_valoare.Text = "Valoare";
             // 
             // label_descriere
             // 
             this.label_descriere.AutoSize = true;
+            this.label_descriere.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_descriere.Location = new System.Drawing.Point(14, 16);
             this.label_descriere.Name = "label_descriere";
-            this.label_descriere.Size = new System.Drawing.Size(71, 20);
+            this.label_descriere.Size = new System.Drawing.Size(74, 20);
             this.label_descriere.TabIndex = 15;
             this.label_descriere.Text = "Descriere";
             // 
@@ -100,13 +106,14 @@ namespace ProjectFinante
             this.textBox_descriere.Location = new System.Drawing.Point(14, 39);
             this.textBox_descriere.MaxLength = 500;
             this.textBox_descriere.Name = "textBox_descriere";
-            this.textBox_descriere.Size = new System.Drawing.Size(404, 27);
+            this.textBox_descriere.Size = new System.Drawing.Size(400, 27);
             this.textBox_descriere.TabIndex = 14;
             // 
             // PanelCheltuieliRecurente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.Controls.Add(this.btn_salveaza);
             this.Controls.Add(this.comboBox_recurenta);
             this.Controls.Add(this.label_recurenta);
@@ -115,7 +122,7 @@ namespace ProjectFinante
             this.Controls.Add(this.label_descriere);
             this.Controls.Add(this.textBox_descriere);
             this.Name = "PanelCheltuieliRecurente";
-            this.Size = new System.Drawing.Size(510, 481);
+            this.Size = new System.Drawing.Size(496, 494);
             this.ResumeLayout(false);
             this.PerformLayout();
 

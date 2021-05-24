@@ -11,6 +11,8 @@ namespace ProjectFinante
         [STAThread]
         static void Main()
         {
+            Database.initDatabase();
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

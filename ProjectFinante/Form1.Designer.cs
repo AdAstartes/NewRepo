@@ -30,7 +30,10 @@ namespace ProjectFinante
         private void InitializeComponent()
         {
             this.panel_menu = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel_statistici = new System.Windows.Forms.Panel();
+            this.btn_statistici_balanta = new System.Windows.Forms.Button();
             this.btn_statistici_venituri = new System.Windows.Forms.Button();
             this.btn_statistici_cheltuieli = new System.Windows.Forms.Button();
             this.btn_tab_statistici = new System.Windows.Forms.Button();
@@ -53,6 +56,8 @@ namespace ProjectFinante
             // 
             this.panel_menu.AutoScroll = true;
             this.panel_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(17)))), ((int)(((byte)(12)))));
+            this.panel_menu.Controls.Add(this.button2);
+            this.panel_menu.Controls.Add(this.button1);
             this.panel_menu.Controls.Add(this.panel_statistici);
             this.panel_menu.Controls.Add(this.btn_tab_statistici);
             this.panel_menu.Controls.Add(this.panel_cheltuieli);
@@ -62,20 +67,70 @@ namespace ProjectFinante
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_menu.Location = new System.Drawing.Point(0, 0);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(250, 459);
+            this.panel_menu.Size = new System.Drawing.Size(250, 665);
             this.panel_menu.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Cornsilk;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(0, 469);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(250, 45);
+            this.button2.TabIndex = 10;
+            this.button2.Tag = "altele";
+            this.button2.Text = "Contact";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.switchInterface);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Thistle;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(0, 424);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(250, 45);
+            this.button1.TabIndex = 9;
+            this.button1.Tag = "altele";
+            this.button1.Text = "Despre Aplicatie";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.switchInterface);
             // 
             // panel_statistici
             // 
             this.panel_statistici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panel_statistici.Controls.Add(this.btn_statistici_balanta);
             this.panel_statistici.Controls.Add(this.btn_statistici_venituri);
             this.panel_statistici.Controls.Add(this.btn_statistici_cheltuieli);
             this.panel_statistici.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_statistici.Location = new System.Drawing.Point(0, 299);
             this.panel_statistici.Name = "panel_statistici";
-            this.panel_statistici.Size = new System.Drawing.Size(250, 82);
+            this.panel_statistici.Size = new System.Drawing.Size(250, 125);
             this.panel_statistici.TabIndex = 8;
             this.panel_statistici.Visible = false;
+            // 
+            // btn_statistici_balanta
+            // 
+            this.btn_statistici_balanta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_statistici_balanta.FlatAppearance.BorderSize = 0;
+            this.btn_statistici_balanta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_statistici_balanta.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_statistici_balanta.Location = new System.Drawing.Point(0, 80);
+            this.btn_statistici_balanta.Name = "btn_statistici_balanta";
+            this.btn_statistici_balanta.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_statistici_balanta.Size = new System.Drawing.Size(250, 40);
+            this.btn_statistici_balanta.TabIndex = 2;
+            this.btn_statistici_balanta.Tag = "statistici";
+            this.btn_statistici_balanta.Text = "Balanta";
+            this.btn_statistici_balanta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_statistici_balanta.UseVisualStyleBackColor = true;
+            this.btn_statistici_balanta.Click += new System.EventHandler(this.switchInterface);
             // 
             // btn_statistici_venituri
             // 
@@ -92,6 +147,7 @@ namespace ProjectFinante
             this.btn_statistici_venituri.Text = "Venituri";
             this.btn_statistici_venituri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_statistici_venituri.UseVisualStyleBackColor = true;
+            this.btn_statistici_venituri.Click += new System.EventHandler(this.switchInterface);
             // 
             // btn_statistici_cheltuieli
             // 
@@ -108,10 +164,13 @@ namespace ProjectFinante
             this.btn_statistici_cheltuieli.Text = "Cheltuieli";
             this.btn_statistici_cheltuieli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_statistici_cheltuieli.UseVisualStyleBackColor = true;
+            this.btn_statistici_cheltuieli.Click += new System.EventHandler(this.switchInterface);
             // 
             // btn_tab_statistici
             // 
+            this.btn_tab_statistici.BackColor = System.Drawing.Color.LightBlue;
             this.btn_tab_statistici.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_tab_statistici.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_tab_statistici.Location = new System.Drawing.Point(0, 254);
             this.btn_tab_statistici.Name = "btn_tab_statistici";
             this.btn_tab_statistici.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -119,7 +178,7 @@ namespace ProjectFinante
             this.btn_tab_statistici.TabIndex = 7;
             this.btn_tab_statistici.Text = "Statistici";
             this.btn_tab_statistici.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tab_statistici.UseVisualStyleBackColor = true;
+            this.btn_tab_statistici.UseVisualStyleBackColor = false;
             this.btn_tab_statistici.Click += new System.EventHandler(this.toggleTab);
             // 
             // panel_cheltuieli
@@ -170,7 +229,9 @@ namespace ProjectFinante
             // 
             // btn_tab_cheltuieli
             // 
+            this.btn_tab_cheltuieli.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_tab_cheltuieli.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_tab_cheltuieli.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_tab_cheltuieli.Location = new System.Drawing.Point(0, 127);
             this.btn_tab_cheltuieli.Name = "btn_tab_cheltuieli";
             this.btn_tab_cheltuieli.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -178,7 +239,7 @@ namespace ProjectFinante
             this.btn_tab_cheltuieli.TabIndex = 4;
             this.btn_tab_cheltuieli.Text = "Cheltuieli";
             this.btn_tab_cheltuieli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tab_cheltuieli.UseVisualStyleBackColor = true;
+            this.btn_tab_cheltuieli.UseVisualStyleBackColor = false;
             this.btn_tab_cheltuieli.Click += new System.EventHandler(this.toggleTab);
             // 
             // panel_venituri
@@ -229,7 +290,9 @@ namespace ProjectFinante
             // 
             // btn_tab_venituri
             // 
+            this.btn_tab_venituri.BackColor = System.Drawing.Color.PaleGreen;
             this.btn_tab_venituri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_tab_venituri.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_tab_venituri.Location = new System.Drawing.Point(0, 0);
             this.btn_tab_venituri.Name = "btn_tab_venituri";
             this.btn_tab_venituri.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -237,14 +300,15 @@ namespace ProjectFinante
             this.btn_tab_venituri.TabIndex = 1;
             this.btn_tab_venituri.Text = "Venituri";
             this.btn_tab_venituri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tab_venituri.UseVisualStyleBackColor = true;
+            this.btn_tab_venituri.UseVisualStyleBackColor = false;
             this.btn_tab_venituri.Click += new System.EventHandler(this.toggleTab);
             // 
             // panel_main
             // 
+            this.panel_main.BackColor = System.Drawing.Color.Beige;
             this.panel_main.Location = new System.Drawing.Point(257, 0);
             this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(642, 459);
+            this.panel_main.Size = new System.Drawing.Size(707, 665);
             this.panel_main.TabIndex = 1;
             // 
             // Form1
@@ -253,7 +317,8 @@ namespace ProjectFinante
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(899, 459);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(983, 550);
             this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_menu);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -283,6 +348,9 @@ namespace ProjectFinante
         private System.Windows.Forms.Button btn_statistici_cheltuieli;
         private System.Windows.Forms.Button btn_tab_statistici;
         private System.Windows.Forms.Panel panel_main;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_statistici_balanta;
     }
 }
 

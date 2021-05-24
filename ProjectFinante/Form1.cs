@@ -54,11 +54,21 @@ namespace ProjectFinante
                     panel_main.Controls.Add(new PanelCheltuieliFixe());
                     break;
                 case "statistici_Cheltuieli":
-                    panel_venituri.Visible = !panel_venituri.Visible;
+                    panel_main.Controls.Add(new PanelStatisticiCheltuieli());
                     break;
                 case "statistici_Venituri":
-                    panel_cheltuieli.Visible = !panel_cheltuieli.Visible;
+                    panel_main.Controls.Add(new PanelStatisticiVenituri());
                     break;
+                case "statistici_Balanta":
+                    panel_main.Controls.Add(new PanelStatisticiBalanta());
+                    break;
+                case "altele_Despre Aplicatie":
+                    panel_main.Controls.Add(new PanelAplicatie());
+                    break;
+                case "altele_Contact":
+                    panel_main.Controls.Add(new PanelContact());
+                    break;
+
                 default: break;
             }
         }

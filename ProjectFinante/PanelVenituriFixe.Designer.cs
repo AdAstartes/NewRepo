@@ -40,19 +40,22 @@ namespace ProjectFinante
             // 
             // btn_salveaza
             // 
+            this.btn_salveaza.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btn_salveaza.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_salveaza.Location = new System.Drawing.Point(17, 247);
             this.btn_salveaza.Name = "btn_salveaza";
-            this.btn_salveaza.Size = new System.Drawing.Size(94, 29);
+            this.btn_salveaza.Size = new System.Drawing.Size(95, 30);
             this.btn_salveaza.TabIndex = 27;
             this.btn_salveaza.Text = "Salveaza";
-            this.btn_salveaza.UseVisualStyleBackColor = true;
+            this.btn_salveaza.UseVisualStyleBackColor = false;
             // 
             // label_recurenta
             // 
             this.label_recurenta.AutoSize = true;
+            this.label_recurenta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_recurenta.Location = new System.Drawing.Point(17, 166);
             this.label_recurenta.Name = "label_recurenta";
-            this.label_recurenta.Size = new System.Drawing.Size(41, 20);
+            this.label_recurenta.Size = new System.Drawing.Size(42, 20);
             this.label_recurenta.TabIndex = 25;
             this.label_recurenta.Text = "Data";
             // 
@@ -62,22 +65,25 @@ namespace ProjectFinante
             this.textBox_valoare.Name = "textBox_valoare";
             this.textBox_valoare.Size = new System.Drawing.Size(186, 27);
             this.textBox_valoare.TabIndex = 24;
+            this.textBox_valoare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_valoare_KeyPress);
             // 
             // label_valoare
             // 
             this.label_valoare.AutoSize = true;
+            this.label_valoare.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_valoare.Location = new System.Drawing.Point(17, 87);
             this.label_valoare.Name = "label_valoare";
-            this.label_valoare.Size = new System.Drawing.Size(59, 20);
+            this.label_valoare.Size = new System.Drawing.Size(61, 20);
             this.label_valoare.TabIndex = 23;
             this.label_valoare.Text = "Valoare";
             // 
             // label_descriere
             // 
             this.label_descriere.AutoSize = true;
+            this.label_descriere.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_descriere.Location = new System.Drawing.Point(17, 15);
             this.label_descriere.Name = "label_descriere";
-            this.label_descriere.Size = new System.Drawing.Size(71, 20);
+            this.label_descriere.Size = new System.Drawing.Size(74, 20);
             this.label_descriere.TabIndex = 22;
             this.label_descriere.Text = "Descriere";
             // 
@@ -100,6 +106,7 @@ namespace ProjectFinante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.btn_salveaza);
             this.Controls.Add(this.label_recurenta);
@@ -108,7 +115,7 @@ namespace ProjectFinante
             this.Controls.Add(this.label_descriere);
             this.Controls.Add(this.textBox_descriere);
             this.Name = "PanelVenituriFixe";
-            this.Size = new System.Drawing.Size(470, 475);
+            this.Size = new System.Drawing.Size(496, 494);
             this.ResumeLayout(false);
             this.PerformLayout();
 
