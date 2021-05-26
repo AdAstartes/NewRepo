@@ -55,6 +55,7 @@ namespace ProjectFinante
             this.btn_salveaza.TabIndex = 34;
             this.btn_salveaza.Text = "Salveaza";
             this.btn_salveaza.UseVisualStyleBackColor = false;
+            this.btn_salveaza.Click += new System.EventHandler(this.btn_salveaza_Click);
             // 
             // label_recurenta
             // 

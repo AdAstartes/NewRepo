@@ -21,5 +21,41 @@ namespace ProjectFinante
         {
             Common.onlyNumbers(sender, e);
         }
+
+        private void btn_salveaza_Click(object sender, EventArgs e)
+        {
+            String descriere = textBox_descriere.Text;
+            String valoare = textBox_valoare.Text;
+            
+
+            if (descriere.Length == 0)
+            {
+                MessageBox.Show("Nu ai completat descrierea!");
+                return;
+            }
+
+            if (valoare.Length == 0)
+            {
+                MessageBox.Show("Nu ai completat valoarea!");
+                return;
+            }
+
+            double valoareDouble = Convert.ToDouble(valoare);
+            if (valoareDouble <= 0)
+            {
+                MessageBox.Show("Valoarea trebuie sa fie mai mare decat 0!");
+                return;
+
+
+                Database.insert("INSERT INTO venituri (descriere, valoare,) VALUES " +
+                    "('" + descriere + "', '" + valoare +"')");
+
+                MessageBox.Show("Datele au fost salvate!");
+                textBox_descriere.Text = "";
+                textBox_valoare.Text = "";
+
+            }
+        }
     }
 }
+
