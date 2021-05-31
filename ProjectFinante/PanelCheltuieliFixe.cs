@@ -47,7 +47,7 @@ namespace ProjectFinante
                 return;
 
 
-                Database.insert("INSERT INTO venituri (descriere, valoare) VALUES " +
+                Database.insert("INSERT INTO cheltuieli (descriere, valoare) VALUES " +
                     "('" + descriere + "', '" + valoare + "', ");
 
                 MessageBox.Show("Datele au fost salvate!");

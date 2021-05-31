@@ -40,6 +40,7 @@ namespace ProjectFinante
             this.label_Descriere_App.Size = new System.Drawing.Size(99, 20);
             this.label_Descriere_App.TabIndex = 0;
             this.label_Descriere_App.Text = "DescriereApp";
+            this.label_Descriere_App.Click += new System.EventHandler(this.label_Descriere_App_Click);
             // 
             // PanelAplicatie
             // 

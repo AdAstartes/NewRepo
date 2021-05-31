@@ -17,12 +17,12 @@ namespace ProjectFinante
             InitializeComponent();
         }
 
-        public void onlyNumbers(object sender, KeyPressEventArgs e)
+        public void OnlyNumbers(object sender, KeyPressEventArgs e)
         {
             Common.onlyNumbers(sender, e);
         }
 
-        private void btn_salveaza_Click(object sender, EventArgs e)
+        private void Btn_salveaza_Click(object sender, EventArgs e)
         {
             String descriere = textBox_descriere.Text;
             String valoare = textBox_valoare.Text;

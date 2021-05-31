@@ -323,7 +323,7 @@ namespace ProjectFinante
             this.Controls.Add(this.panel_menu);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Form1";
-            this.Text = "EVIDENTA FINANCIARA";
+            this.Text = "E.F.P. 1.1";
             this.panel_menu.ResumeLayout(false);
             this.panel_statistici.ResumeLayout(false);
             this.panel_cheltuieli.ResumeLayout(false);

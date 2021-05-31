@@ -48,6 +48,7 @@ namespace ProjectFinante
             this.btn_salveaza.TabIndex = 20;
             this.btn_salveaza.Text = "Salveaza";
             this.btn_salveaza.UseVisualStyleBackColor = false;
+            this.btn_salveaza.Click += new System.EventHandler(this.Btn_salveaza_Click);
             // 
             // comboBox_recurenta
             // 
@@ -79,7 +80,6 @@ namespace ProjectFinante
             this.textBox_valoare.Name = "textBox_valoare";
             this.textBox_valoare.Size = new System.Drawing.Size(185, 27);
             this.textBox_valoare.TabIndex = 17;
-            this.textBox_valoare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_valoare_KeyPress);
             // 
             // label_valoare
             // 
