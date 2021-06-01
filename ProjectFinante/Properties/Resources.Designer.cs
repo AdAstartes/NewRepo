@@ -59,5 +59,14 @@ namespace ProjectFinante.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Probe.rtf.
+        /// </summary>
+        internal static string documentDespreAplicatie {
+            get {
+                return ResourceManager.GetString("documentDespreAplicatie", resourceCulture);
+            }
+        }
     }
 }

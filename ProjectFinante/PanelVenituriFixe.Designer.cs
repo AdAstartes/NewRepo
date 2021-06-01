@@ -35,7 +35,7 @@ namespace ProjectFinante
             this.label_valoare = new System.Windows.Forms.Label();
             this.label_descriere = new System.Windows.Forms.Label();
             this.textBox_descriere = new System.Windows.Forms.TextBox();
-            this.dateTimePicker_data = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btn_salveaza
@@ -96,19 +96,19 @@ namespace ProjectFinante
             this.textBox_descriere.Size = new System.Drawing.Size(404, 27);
             this.textBox_descriere.TabIndex = 21;
             // 
-            // dateTimePicker_data
+            // dateTimePicker
             // 
-            this.dateTimePicker_data.Location = new System.Drawing.Point(17, 190);
-            this.dateTimePicker_data.Name = "dateTimePicker_data";
-            this.dateTimePicker_data.Size = new System.Drawing.Size(250, 27);
-            this.dateTimePicker_data.TabIndex = 28;
+            this.dateTimePicker.Location = new System.Drawing.Point(17, 190);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(250, 27);
+            this.dateTimePicker.TabIndex = 28;
             // 
             // PanelVenituriFixe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.Controls.Add(this.dateTimePicker_data);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.btn_salveaza);
             this.Controls.Add(this.label_recurenta);
             this.Controls.Add(this.textBox_valoare);
@@ -130,6 +130,6 @@ namespace ProjectFinante
         private System.Windows.Forms.Label label_valoare;
         private System.Windows.Forms.Label label_descriere;
         private System.Windows.Forms.TextBox textBox_descriere;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_data;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }

@@ -47,5 +47,10 @@ namespace ProjectFinante
                 }
             }
         }
+
+        private void PanelAplicatie_Load(object sender, EventArgs e)
+        {
+            richTextBox1.ReadOnly = true;
+        }
     }
 }

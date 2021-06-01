@@ -30,6 +30,7 @@ namespace ProjectFinante
         private void InitializeComponent()
         {
             this.label_Descriere_App = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label_Descriere_App
@@ -42,14 +43,26 @@ namespace ProjectFinante
             this.label_Descriere_App.Text = "DescriereApp";
             this.label_Descriere_App.Click += new System.EventHandler(this.label_Descriere_App_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Beige;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Location = new System.Drawing.Point(53, 118);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(535, 255);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "\nintroduce text aici";
+            // 
             // PanelAplicatie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label_Descriere_App);
             this.Name = "PanelAplicatie";
             this.Size = new System.Drawing.Size(650, 494);
+            this.Load += new System.EventHandler(this.PanelAplicatie_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -58,5 +71,6 @@ namespace ProjectFinante
         #endregion
 
         private System.Windows.Forms.Label label_Descriere_App;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

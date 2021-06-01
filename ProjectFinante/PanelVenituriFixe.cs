@@ -26,7 +26,8 @@ namespace ProjectFinante
         {
             String descriere = textBox_descriere.Text;
             String valoare = textBox_valoare.Text;
-            
+            string dataDocument = dateTimePicker.Value.ToString("yyyy-MM-dd");
+
 
             if (descriere.Length == 0)
             {
@@ -45,17 +46,18 @@ namespace ProjectFinante
             {
                 MessageBox.Show("Valoarea trebuie sa fie mai mare decat 0!");
                 return;
+            }
 
 
-                Database.insert("INSERT INTO venituri (descriere, valoare,) VALUES " +
-                    "('" + descriere + "', '" + valoare +"')");
+            Database.insert("INSERT INTO venituri (descriere, valoare, tip, data_document) VALUES " +
+             "('" + descriere + "', '" + valoare + "','fix', '" + dataDocument + "')");
 
-                MessageBox.Show("Datele au fost salvate!");
+            MessageBox.Show("Datele au fost salvate!");
                 textBox_descriere.Text = "";
                 textBox_valoare.Text = "";
 
             }
         }
     }
-}
+
 
