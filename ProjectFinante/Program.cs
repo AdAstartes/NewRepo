@@ -16,7 +16,17 @@ namespace ProjectFinante
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            bool checking_db = false;
+            if (checking_db)
+            {
+                Application.Run(new DBManagement());
+            }
+            else
+            {
+                Application.Run(new Form1());
+            }
+           
+           
         }
     }
 }
