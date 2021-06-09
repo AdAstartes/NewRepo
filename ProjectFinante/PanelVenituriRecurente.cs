@@ -27,8 +27,8 @@ namespace ProjectFinante
             String descriere = textBox_descriere.Text;
             String valoare = textBox_valoare.Text;
             int tip = comboBox_recurenta.SelectedIndex;
-
-            if(descriere.Length == 0)
+            string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd");
+            if (descriere.Length == 0)
             {
                 MessageBox.Show("Nu ai completat descrierea!");
                 return;
@@ -53,8 +53,8 @@ namespace ProjectFinante
                 return;
             }
             
-            Database.insert("INSERT INTO venituri (descriere, valoare, recurenta, tip) VALUES " +
-                "('" + descriere + "', '" + valoare + "', '" + Common.tipRecurenta[tip] + "', 'recurenta')");
+            Database.insert("INSERT INTO venituri (descriere, valoare, recurenta, tip, data_document) VALUES " +
+                "('" + descriere + "', '" + valoare + "', '" + Common.tipRecurenta[tip] + "', 'recurenta', '"+sqlFormattedDate+"')");
 
             MessageBox.Show("Datele au fost salvate!");
             textBox_descriere.Text = "";

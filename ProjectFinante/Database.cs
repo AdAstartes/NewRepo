@@ -7,15 +7,19 @@ using System.Data.SQLite;
 using System.IO;
 using System.Diagnostics;
 using System.Collections;
+using System.Windows.Forms;
 
 namespace ProjectFinante
 {
     public static class Database
+
     {
+
         static SQLiteConnection m_dbConnection;
 
         public static void initDatabase()
         {
+           
             String databaseName = "myDb.sqlite";
             if(!File.Exists(databaseName))
             {
@@ -43,30 +47,53 @@ namespace ProjectFinante
             command.ExecuteNonQuery();
         }
 
-        public static List<String> select(String sql)
+        public static List<Dictionary<string,string>> select(String sql, List<string> fields)
         {
 
-            List<String> returned = new List<string>();
-            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
-            
-            //Debug.WriteLine(sql);
+           List<Dictionary<string, string>> list = new List<Dictionary<string, string>>();
 
-            SQLiteDataReader r = command.ExecuteReader();
-            while (r.Read())
+
+
+           System.Data.DataTable table = GetDataTable(sql);
+            foreach (System.Data.DataRow row in table.Rows)
             {
-                //string FileNames = (string)r["FileName"];
-                //returned.Add((string)r);
-                Console.WriteLine(r);
 
+                Dictionary<string, string> dict = new Dictionary<string, string>();
+                foreach (var f in fields)
+                {
+                    dict.Add(f,row[f].ToString());
+                }
+                list.Add(dict);
             }
 
-            return returned;
+            return list;
         }
 
-        public static List<Dictionary<string,string>> read_table(string name)
+        public static List<Dictionary<string,string>> read_table(string name, string type, DateTime date1, DateTime date2)
         {
+            String query;
             List<Dictionary<string, string>> list = new List<Dictionary<string, string>>();
-            String query = "SELECT * FROM " + name;
+            switch (type)
+            {
+                case "fix":
+                    {
+                        query = "SELECT * FROM " + name + " WHERE data_document <= '" + date2.ToString("yyyy-MM-dd") + "' and data_document >= '" + date1.ToString("yyyy-MM-dd")+"' and tip = 'fix'";
+                        break;
+                    }
+                case "recurent":
+                    {
+                        //MessageBox.Show("GOT HERE");
+
+                        query = "SELECT * FROM " + name +  " WHERE data_document <= '" + date2.ToString("yyyy-MM-dd") + "' and data_document >= '" + date1.ToString("yyyy-MM-dd") + "' and tip = 'recurenta'";
+                        break;
+                    }
+                default:
+                    {
+                        query = "SELECT * FROM " + name + " WHERE data_document <= '" + date2.ToString("yyyy-MM-dd") + "' and data_document >= '" + date1.ToString("yyyy-MM-dd") + "'";
+                        break;
+                    }
+            }
+         
 
 
             switch (name)
@@ -112,9 +139,6 @@ namespace ProjectFinante
             }
 
             return list;
-
-
-            return null;
 
         }
 

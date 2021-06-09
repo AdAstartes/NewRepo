@@ -38,7 +38,7 @@ namespace ProjectFinante
             String sql_query = "Select * from " + table_name;
 
            
-            List<Dictionary<string, string>> list = Database.read_table(table_name);
+            List<Dictionary<string, string>> list = Database.read_table(table_name,"all",new DateTime(999,12,1), new DateTime(9999,2,12));
 
             listView_tables.Items.Clear();
             listView_tables.Columns.Clear();
@@ -74,7 +74,7 @@ namespace ProjectFinante
             float media = 0;
             int count = 0;
 
-            List<Dictionary<string, string>> list = Database.read_table(table_name);
+            List<Dictionary<string, string>> list = Database.read_table(table_name, "all", new DateTime(999, 12, 1), new DateTime(9999, 2, 12));
 
             listView_tables.Items.Clear();
             listView_tables.Columns.Clear();
