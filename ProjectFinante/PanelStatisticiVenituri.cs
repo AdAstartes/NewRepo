@@ -33,7 +33,7 @@ namespace ProjectFinante
 
             DateTime date2 = dateTimePicker2.Value;
             string recurenta = recurenta_box.Text;
-            Dictionary<string, float> returndict = Money.calculate_total(recurenta, date1, date2, "cheltuieli");
+            Dictionary<string, float> returndict = Money.calculate_total(recurenta, date1, date2, "venituri");
             MessageBox.Show((returndict["value"] / returndict["count"]).ToString());
         }
 
@@ -49,6 +49,11 @@ namespace ProjectFinante
 
         private void button3_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "CSV (*.csv)|*.csv";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+
             saveFileDialog1.ShowDialog();  // cheltuieli in loc de venituri copy+pasta   - save file dialog
 
             // If the file name is not an empty string open it for saving.
@@ -84,10 +89,8 @@ namespace ProjectFinante
                 }
                 if (lst.Count() > 0)
                 {
-                    String csv = String.Join(",",
-                             lst[0].Select(d => d.Key));
+                    String csv = String.Join(",", lst[0].Select(d => d.Key));
                     sb.Append(csv + Environment.NewLine);
-
                 }
 
 
@@ -105,20 +108,6 @@ namespace ProjectFinante
                 System.IO.File.WriteAllText(saveFileDialog1.FileName, sb.ToString());
 
             }
-
-
-
-
-
-
-            
-
-            
-
-
-
-
-
 
         }
 

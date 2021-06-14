@@ -45,23 +45,22 @@ namespace ProjectFinante
             this.btn_export_data.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_export_data.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_export_data.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_export_data.Location = new System.Drawing.Point(83, 274);
-            this.btn_export_data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_export_data.Location = new System.Drawing.Point(95, 365);
             this.btn_export_data.Name = "btn_export_data";
-            this.btn_export_data.Size = new System.Drawing.Size(276, 31);
+            this.btn_export_data.Size = new System.Drawing.Size(315, 41);
             this.btn_export_data.TabIndex = 17;
             this.btn_export_data.Text = "Exporta datele";
             this.btn_export_data.UseVisualStyleBackColor = false;
+            this.btn_export_data.Click += new System.EventHandler(this.btn_export_data_Click);
             // 
             // btn_val_totala
             // 
             this.btn_val_totala.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_val_totala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_val_totala.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_val_totala.Location = new System.Drawing.Point(83, 185);
-            this.btn_val_totala.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_val_totala.Location = new System.Drawing.Point(95, 247);
             this.btn_val_totala.Name = "btn_val_totala";
-            this.btn_val_totala.Size = new System.Drawing.Size(276, 31);
+            this.btn_val_totala.Size = new System.Drawing.Size(315, 41);
             this.btn_val_totala.TabIndex = 16;
             this.btn_val_totala.Text = "Calculeaza valoarea totala";
             this.btn_val_totala.UseVisualStyleBackColor = false;
@@ -72,10 +71,9 @@ namespace ProjectFinante
             this.btn_val_medie.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btn_val_medie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_val_medie.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_val_medie.Location = new System.Drawing.Point(83, 230);
-            this.btn_val_medie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_val_medie.Location = new System.Drawing.Point(95, 307);
             this.btn_val_medie.Name = "btn_val_medie";
-            this.btn_val_medie.Size = new System.Drawing.Size(276, 31);
+            this.btn_val_medie.Size = new System.Drawing.Size(315, 41);
             this.btn_val_medie.TabIndex = 15;
             this.btn_val_medie.Text = "Calculeaza valoarea medie";
             this.btn_val_medie.UseVisualStyleBackColor = false;
@@ -88,45 +86,42 @@ namespace ProjectFinante
             "Fixe",
             "Recurente",
             "Ambele"});
-            this.recurenta_box.Location = new System.Drawing.Point(35, 145);
-            this.recurenta_box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.recurenta_box.Location = new System.Drawing.Point(40, 193);
             this.recurenta_box.Name = "recurenta_box";
-            this.recurenta_box.Size = new System.Drawing.Size(132, 23);
+            this.recurenta_box.Size = new System.Drawing.Size(150, 28);
             this.recurenta_box.TabIndex = 14;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(54, 110);
+            this.label1.Location = new System.Drawing.Point(62, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 15);
+            this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "Tip Cheltuieli";
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(269, 57);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker2.Location = new System.Drawing.Point(307, 76);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(132, 23);
+            this.dateTimePicker2.Size = new System.Drawing.Size(150, 27);
             this.dateTimePicker2.TabIndex = 12;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(35, 57);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(40, 76);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(132, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(150, 27);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // label_Panala
             // 
             this.label_Panala.AutoSize = true;
             this.label_Panala.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_Panala.Location = new System.Drawing.Point(284, 31);
+            this.label_Panala.Location = new System.Drawing.Point(325, 41);
             this.label_Panala.Name = "label_Panala";
-            this.label_Panala.Size = new System.Drawing.Size(89, 15);
+            this.label_Panala.Size = new System.Drawing.Size(115, 20);
             this.label_Panala.TabIndex = 10;
             this.label_Panala.Text = "Pana la data de";
             // 
@@ -134,15 +129,15 @@ namespace ProjectFinante
             // 
             this.label_Dela.AutoSize = true;
             this.label_Dela.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_Dela.Location = new System.Drawing.Point(54, 31);
+            this.label_Dela.Location = new System.Drawing.Point(62, 41);
             this.label_Dela.Name = "label_Dela";
-            this.label_Dela.Size = new System.Drawing.Size(79, 15);
+            this.label_Dela.Size = new System.Drawing.Size(100, 20);
             this.label_Dela.TabIndex = 9;
             this.label_Dela.Text = "De la data de";
             // 
             // PanelStatisticiCheltuieli
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.Controls.Add(this.btn_export_data);
@@ -154,9 +149,8 @@ namespace ProjectFinante
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label_Panala);
             this.Controls.Add(this.label_Dela);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PanelStatisticiCheltuieli";
-            this.Size = new System.Drawing.Size(434, 370);
+            this.Size = new System.Drawing.Size(496, 493);
             this.ResumeLayout(false);
             this.PerformLayout();
 
